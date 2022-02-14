@@ -1,0 +1,132 @@
+/*
+	Dies ist die css-Datei, in der das Layout des Graphen beschrieben ist.
+*/
+
+/*
+	Style-Angabe fuer einen Knoten
+*/
+node {
+	size: 30;
+	text-size: 12;
+	text-offset: -20, 25;
+	text-alignment: right;
+	stroke-mode: plain;
+	stroke-width: 1px;
+	text-color: #003366;
+	fill-color: #99ccff;
+	stroke-color: #003366;
+}
+
+node.petriState {
+	shape: box;
+	size-mode: fit;
+	padding: 10, 5;
+	text-offset: 0, 2;
+	text-alignment: center;
+}
+
+node.initialState {
+	fill-color: #feee9d;
+}
+
+node.currentState {
+	stroke-color: #fe282c;
+}
+
+node.transition {
+	shape: box;
+}
+
+/*
+   zusaetzliches Attribut "highlight" fuer einen Knoten, der
+   hervorgehoben werden soll
+*/
+node.live {
+	fill-color: #fec7da;
+	stroke-color: #fe282c;
+}
+
+node.selected {
+	stroke-color: #fe282c;
+}
+
+node.mState {
+	text-color: #fe282c;
+	text-style: normal;
+}
+
+node.onPath {
+}
+
+node.mPrimeState {
+	text-color: #fe282c;
+	text-style: bold;
+}
+
+/*
+   zusaetzliches Attribut "bild" fuer einen Knoten mit einer Abbildung
+*/
+node.bild {
+	shape: rounded-box;
+	size: 50;
+	fill-mode: image-scaled;
+	fill-image: url('images/logo_grau.png');
+}
+
+/*
+	Style-Angabe fuer eine Kante
+*/
+edge {
+	arrow-shape: arrow;
+	arrow-size: 9px, 6px;
+	text-size: 12;
+	text-color: purple;
+	text-alignment: along;
+	text-offset: 0, -15;
+}
+
+
+edge.currentEdge {
+	fill-color: #fe282c;
+}
+
+/*
+	Style-Angabe fuer ein Sprite, dass als Label für eine Kante benutzt wird
+*/
+sprite.edgeLabel {
+	shape: box;
+	fill-color: purple;
+	text-color: white;
+	size-mode: fit;
+	padding: 10, 0;
+	text-size: 12;
+	text-alignment: center;
+	text-offset: 0, -3;
+}
+
+sprite.belongsToPath {
+	fill-color: #fe282c;
+	shape: box;
+	text-color: white;
+	size-mode: fit;
+	padding: 10, 0;
+	text-size: 12;
+	text-alignment: center;
+	text-offset: 0, -3;
+
+}
+
+/*
+	Style-Angabe fuer ein Sprite, das einen Knoten markiert
+*/
+sprite.mark {
+	shape: cross;
+	fill-color: rgba(255, 0, 0, 175);
+	size: 40;
+	z-index: 5;
+}
+
+sprite.tokenMarker {
+	size: 0;
+	text-offset: 0, -2;
+}
